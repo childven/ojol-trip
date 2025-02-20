@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catatan Perjalanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<br><br><br><br><br><br><br><br><br><br><br>
+<body>
+    <div class="container">
+        <h1>Catatan Perjalanan</h1>
+        <form id="trip-form">
+            <label for="tanggal">Tanggal:</label>
+            <input type="date" id="tanggal" required>
+
+            <label for="hari">Hari:</label>
+            <input type="text" id="hari" required>
+
+            <label for="jenis">Jenis Perjalanan:</label>
+            <select id="jenis" required>
+                <option value="">Pilih</option>
+                <option value="berangkat">Berangkat</option>
+                <option value="pulang">Pulang</option>
+            </select>
+
+            <label for="driver">Driver:</label>
+            <select id="driver" required>
+                <option value="">Pilih Penjemput</option>
+                <option value="dudung">Dudung</option>
+                <option value="cahya">Cahya</option>
+            </select>
+
+            <button type="submit">Tambah Perjalanan</button>
+        </form>
+
+        <h2>Riwayat Perjalanan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tanggal</th>
+                    <th>Hari</th>
+                    <th>Jenis</th>
+                    <th>Driver</th>
+                    <th>Waktu</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody id="trip-list">
+                <!-- Data perjalanan akan ditampilkan di sini -->
+            </tbody>
+        </table>
+
+        <h3>Total: <span id="total">Rp 0</span></h3>
+        <center><button type="button" id="reset-btn">Reset</button></center>
+    </div>
+    
+    <script src="script.js"></script>
+    <br><br>
+</body>
+</html>

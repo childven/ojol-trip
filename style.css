@@ -1,0 +1,122 @@
+body {
+    background-color: #1e1e1e;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background: #252525;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(127, 255, 212, 0.2);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input, select, button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+input, select {
+    background: #444;
+    color: white;
+    font-weight: 500;
+    border: 1px solid #80e6d6;
+}
+
+input::placeholder,
+select:invalid {
+    font-weight: 400;
+}
+
+button {
+    color: #1e1e1e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: aquamarine;
+    color: #252525;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+th {
+    background: aquamarine;
+    color: #000000;
+    font-weight: 700;
+}
+
+td {
+    font-weight: 500;
+}
+
+tfoot {
+    background: #444;
+    font-weight: bold;
+    color: #f4c542;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    input, select, button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    h1, h2, h3 {
+        font-size: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
