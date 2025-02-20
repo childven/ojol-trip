@@ -1,13 +1,10 @@
 body {
     background-color: #1e1e1e;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', sans-serif;
     color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
+    display: block; /* Biar tinggi halaman bebas */
     margin: 0;
+    padding: 20px;
 }
 
 .container {
@@ -17,7 +14,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(127, 255, 212, 0.2);
+    margin: 0 auto; /* Tengahin kontainer */
 }
+
 
 h1, h2, h3 {
     text-align: center;
