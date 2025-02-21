@@ -93,6 +93,13 @@ tfoot {
     color: #f4c542;
 }
 
+#total {
+    color: aquamarine;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Efek perubahan warna */
+}
+
+
 @media (max-width: 600px) {
     .container {
         width: 95%;
