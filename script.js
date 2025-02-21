@@ -13,23 +13,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderTrips() {
-        tripList.innerHTML = "";
-        totalHarga = parseInt(localStorage.getItem("totalHarga")) || 0;
-        totalSpan.textContent = `Rp ${totalHarga.toLocaleString()}`;
+    tripList.innerHTML = "";
+    totalHarga = parseInt(localStorage.getItem("totalHarga")) || 0;
+    totalSpan.textContent = `Rp ${totalHarga.toLocaleString()}`;
 
-        trips.forEach(trip => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-                <td>${trip.tanggal}</td>
-                <td>${trip.hari}</td>
-                <td>${trip.jenis}</td>
-                <td>${trip.driver}</td>
-                <td>${trip.waktu}</td>
-                <td>Rp ${trip.harga.toLocaleString()}</td>
-            `;
-            tripList.appendChild(row);
-        });
-    }
+    // Tambahkan efek perubahan warna
+    totalSpan.style.color = "aquamarine";
+
+    trips.forEach(trip => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+            <td>${trip.tanggal}</td>
+            <td>${trip.hari}</td>
+            <td>${trip.jenis}</td>
+            <td>${trip.driver}</td>
+            <td>${trip.waktu}</td>
+            <td>Rp ${trip.harga.toLocaleString()}</td>
+        `;
+        tripList.appendChild(row);
+    });
+}
+
 
     renderTrips();
 
