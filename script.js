@@ -13,27 +13,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function renderTrips() {
-    tripList.innerHTML = "";
-    totalHarga = parseInt(localStorage.getItem("totalHarga")) || 0;
-    totalSpan.textContent = `Rp ${totalHarga.toLocaleString()}`;
+        tripList.innerHTML = "";
+        totalHarga = parseInt(localStorage.getItem("totalHarga")) || 0;
+        totalSpan.textContent = `Rp ${totalHarga.toLocaleString()}`;
 
-    // Tambahkan efek perubahan warna
-    totalSpan.style.color = "aquamarine";
+        // Tambahkan efek perubahan warna
+        totalSpan.style.color = "aquamarine";
 
-    trips.forEach(trip => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${trip.tanggal}</td>
-            <td>${trip.hari}</td>
-            <td>${trip.jenis}</td>
-            <td>${trip.driver}</td>
-            <td>${trip.waktu}</td>
-            <td>Rp ${trip.harga.toLocaleString()}</td>
-        `;
-        tripList.appendChild(row);
-    });
-}
-
+        trips.forEach(trip => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${trip.tanggal}</td>
+                <td>${trip.hari}</td>
+                <td>${trip.jenis}</td>
+                <td>${trip.driver}</td>
+                <td>${trip.waktu}</td>
+                <td>Rp ${trip.harga.toLocaleString()}</td>
+            `;
+            tripList.appendChild(row);
+        });
+    }
 
     renderTrips();
 
@@ -51,7 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const harga = 15000;
+        const harga = jenis === "pulang" ? 20000 : 15000;
+
         totalHarga += harga;
 
         const newTrip = { tanggal, hari, jenis, driver, waktu, harga };
